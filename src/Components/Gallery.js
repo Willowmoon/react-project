@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import Card from 'react-bootstrap/Card'
 
 function Gallery(props) {
   if (!props.launches) {
@@ -8,16 +7,12 @@ function Gallery(props) {
 }
     const icons = props.launches.map((icon, i) => {
     return (
-        <div key={i}>
-          <Card className='flexGalleryitem' style={{width: '18rem', alignContent:'center'}}>
-          {icon.links.mission_patch_small ? <Card.Img src ={icon.links.mission_patch_small}/>: <h1>Info Coming soon</h1>}
-          <Card.Body>
-          <Link to={`/gallery/${icon.launch_date_unix}`}>
-            <Card.Title><h1>{icon.mission_name}</h1> </Card.Title></Link>
-            <Link to={`/gallery/${icon.launch_date_unix}`}><button variant="primary">Details</button></Link>
-          </Card.Body>
-        </Card>
+      <Link to={`/gallery/${icon.launch_date_unix}`} key={i}>
+          <div className='galleryBox'>
+          {icon.links.mission_patch_small ? <img src ={icon.links.mission_patch_small} className="galleryImg"/>: <img src ="https://images.unsplash.com/photo-1557459269-82664330c1f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" className="galleryImg"/>}
+          <h2 className="galleryText">{icon.mission_name}</h2>
         </div>
+        </Link>
       )
     })
     return <div className='flexGallery'>{icons}</div>
