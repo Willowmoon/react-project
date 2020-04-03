@@ -10,12 +10,8 @@ const Details = props => {
         return <></>
     }
     console.log('THIS ONE-DETAILS', props)
-    // console.log('THIS ONE-DETAILS', props.launches[0].launch_date_unix)
-    // console.log('THIS ONE-DETAILS', props.match.params.id)
-
     const filterMap = props.launches.filter((index, i) => index.launch_date_unix == props.match.params.id)[0];
     const mapStart = filterMap.links.flickr_images.map((item, index) => {
-        // console.log(item)
         return (
             <img key={index} style={{ height: '60vh' }} alt="flickr images" src={item} />
         )

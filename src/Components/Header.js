@@ -5,7 +5,7 @@ function Header() {
     return (
         <nav>
         <Link to="/" style={{ textDecoration: "none" }}>
-          <h1 className="navText">Launch Site</h1>
+          <h1 className="navText">Launch</h1>
         </Link>
         <Link to="/gallery" style={{ textDecoration: "none" }}>
           <h2 className="navText">Gallery</h2>

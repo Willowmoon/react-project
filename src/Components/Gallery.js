@@ -3,13 +3,10 @@ import { Link } from "react-router-dom"
 import Card from 'react-bootstrap/Card'
 
 function Gallery(props) {
-  // console.log('launches in gallery ', props)
-  // console.log('launches-onestepfurther in gallery ', props.launches[0])
   if (!props.launches) {
     return <></>
 }
     const icons = props.launches.map((icon, i) => {
-      // console.log('HEREHEREHERE GALLERY MAPPED PROPS',icon)
     return (
         <div key={i}>
           <Card className='flexGalleryitem' style={{width: '18rem', alignContent:'center'}}>
