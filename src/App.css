@@ -59,10 +59,10 @@ img {
 }
 .title {
   position: relative;
-    padding-bottom: 25px;
-    margin-bottom: 26px;
-    border-bottom: 1px dashed #7d7d7d;
-    width: 100vw;
+  padding-bottom: 25px;
+  margin-bottom: 26px;
+  border-bottom: 1px dashed #7d7d7d;
+  width: 100vw;
 }
 .details {
   font-size: 15vw;
@@ -83,7 +83,7 @@ img {
   margin-left: -10px;
 }
  p {
-   font-size: 2vw;
+  font-size: 2vw;
  }
  .flexGallery{
   display: flex;
@@ -91,12 +91,12 @@ img {
  }
  .galleryBox {
   position: relative;
-    margin: 20px;
+  margin: 20px;
  }
  .galleryImg {
   height: 300px;
-    width: 300px;
-    object-fit: cover;
+  width: 300px;
+  object-fit: cover;
  }
  .galleryText{
   text-align: center;
@@ -107,6 +107,6 @@ img {
   left: 50%;
   transform: translate(-50%, 0);
   padding: 5px 0;
-  background-color: rgba(0,0,0,.3);
+  background-color: rgba(0,0,0,0.6);
   z-index: 10;
  }
